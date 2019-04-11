@@ -27,3 +27,17 @@ c.name = 'Test'
 c.email = 'test@example.com'
 c.save
 ~~~
+
+## Deploying on heroku
+
+```
+heroku --version
+heroku login
+(Enter your login credentials)
+heroku keys:add
+heroku create --stack heroku-16
+git push heroku master
+heroku run rails db:migrate
+```
+
+Set `EMAIL` config var on Heroku's Dashboard.
