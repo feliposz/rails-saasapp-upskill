@@ -2,12 +2,28 @@
 
 Coding along [Upskill](http://upskillcourses.com)'s Software-as-a-Service Ruby on Rails App tutorial.
 
+## Install development dependencies
+
+```
+sudo apt-get update
+sudo apt-get install libpq-dev
+rvm install 2.3.0
+bundle install
+```
+
 ## Development server
 
 Using Cloud9 service:
 
 ```
 bundle exec rails server -b $IP -p $PORT 
+```
+
+Local server:
+
+```
+bundle exec bundle exec rails db:migrate RAILS_ENV=development
+bundle exec rails server -p 5000
 ```
 
 ## Database
