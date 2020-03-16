@@ -22,7 +22,8 @@ bundle exec rails server -b $IP -p $PORT
 Local server:
 
 ```
-bundle exec bundle exec rails db:migrate RAILS_ENV=development
+bundle exec rails db:migrate RAILS_ENV=development
+bundle exec rails db:seed RAILS_ENV=development
 bundle exec rails server -p 5000
 ```
 
