@@ -57,4 +57,13 @@ git push heroku master
 heroku run rails db:migrate
 ```
 
-Set `EMAIL` config var on Heroku's Dashboard.
+Set config var on Heroku's Dashboard according to service APIs/keys:
+
+```
+heroku config:set SENDGRID_SMTP_LOGIN=apikey
+heroku config:set SENDGRID_SMTP_PASSWORD=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+heroku config:set SENDGRID_SMTP_PORT=25
+heroku config:set SENDGRID_SMTP_SERVER=smtp.sendgrid.net
+heroku config:set stripe_api_key=sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+heroku config:set stripe_publishable_key=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
