@@ -66,8 +66,17 @@ h1, h2, h3 {
     }
 }
 
-.alert-notice {
-    display: none;
+.flash-container {
+    position: absolute;
+    width: 100%;
+}
+
+.alert-notice, .alert-alert {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: -14px;
+    text-align: center;
 }
 
 .home-signup-links {
