@@ -6,7 +6,7 @@ Coding along [Upskill](http://upskillcourses.com)'s Software-as-a-Service Ruby o
 
 ```
 sudo apt-get update
-sudo apt-get install libpq-dev
+sudo apt-get install libpq-dev imagemagick
 rvm install 2.3.0
 bundle install
 ```
