@@ -1,1 +1,29 @@
-List all community users.
+<% @users.each do |user| %>
+  <% if user.profile %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <ul class="list-unstyled">
+            <li>
+              <div class="well row <%= cycle('white-bg', '') %>">
+                <div class="col-sm-4 text-center">
+                  <%= link_to user do %>
+                    <% if user.profile.avatar and user.profile.avatar.url %>
+                      <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                    <% end %>
+                  <% end %>
+                </div>
+                <div class="col-sm-8">
+                  <%= link_to user do %>
+                    <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                  <% end %>
+                  <p><%= user.profile.job_title %></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
